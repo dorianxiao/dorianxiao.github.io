@@ -98,13 +98,13 @@
 
 
 
-<meta name="description" content="前言 人生苦短，靶场难觅。DVWA是一款基于PHP和MySQL的Web应用，找不到进行“安全测试”的网站没关系，DVWA帮你解决！我们可以利用搭建好的DVWA环境进行各种渗透测试，话不多说，先搭环境吧。OS：Window 10 64bit由于DVWA需要PHP集成环境，本文选择WampServer，WampServer是集成了Apache Web服务器、PHP解释器和MySQL数据库的集成安装环境">
+<meta name="description" content="前言 人生苦短，靶场难觅。DVWA是一款基于PHP和MySQL的Web应用，找不到进行“安全测试”的网站没关系，DVWA帮你解决！我们可以利用搭建好的DVWA环境进行各种渗透测试，话不多说，先搭环境吧。由于DVWA需要PHP集成环境，本文选择WampServer，WampServer是集成了Apache Web服务器、PHP解释器和MySQL数据库的集成安装环境。当然，自己搭建环境也OK。或者国">
 <meta name="keywords" content="渗透,网络安全,Web安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WampServer+DVWA搭建本地渗透测试环境">
 <meta property="og:url" content="https://dorianxiao.github.io/2018/08/08/the2nd/index.html">
 <meta property="og:site_name" content="XIAO">
-<meta property="og:description" content="前言 人生苦短，靶场难觅。DVWA是一款基于PHP和MySQL的Web应用，找不到进行“安全测试”的网站没关系，DVWA帮你解决！我们可以利用搭建好的DVWA环境进行各种渗透测试，话不多说，先搭环境吧。OS：Window 10 64bit由于DVWA需要PHP集成环境，本文选择WampServer，WampServer是集成了Apache Web服务器、PHP解释器和MySQL数据库的集成安装环境">
+<meta property="og:description" content="前言 人生苦短，靶场难觅。DVWA是一款基于PHP和MySQL的Web应用，找不到进行“安全测试”的网站没关系，DVWA帮你解决！我们可以利用搭建好的DVWA环境进行各种渗透测试，话不多说，先搭环境吧。由于DVWA需要PHP集成环境，本文选择WampServer，WampServer是集成了Apache Web服务器、PHP解释器和MySQL数据库的集成安装环境。当然，自己搭建环境也OK。或者国">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pd6jjyisi.bkt.clouddn.com/18-8-9/10863919.jpg">
 <meta property="og:image" content="http://pd6jjyisi.bkt.clouddn.com/18-8-9/44615740.jpg">
@@ -113,10 +113,10 @@
 <meta property="og:image" content="http://pd6jjyisi.bkt.clouddn.com/18-8-9/24201904.jpg">
 <meta property="og:image" content="http://pd6jjyisi.bkt.clouddn.com/18-8-9/20555063.jpg">
 <meta property="og:image" content="http://pd6jjyisi.bkt.clouddn.com/18-8-9/90421859.jpg">
-<meta property="og:updated_time" content="2018-08-09T11:53:47.537Z">
+<meta property="og:updated_time" content="2018-08-09T12:32:45.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WampServer+DVWA搭建本地渗透测试环境">
-<meta name="twitter:description" content="前言 人生苦短，靶场难觅。DVWA是一款基于PHP和MySQL的Web应用，找不到进行“安全测试”的网站没关系，DVWA帮你解决！我们可以利用搭建好的DVWA环境进行各种渗透测试，话不多说，先搭环境吧。OS：Window 10 64bit由于DVWA需要PHP集成环境，本文选择WampServer，WampServer是集成了Apache Web服务器、PHP解释器和MySQL数据库的集成安装环境">
+<meta name="twitter:description" content="前言 人生苦短，靶场难觅。DVWA是一款基于PHP和MySQL的Web应用，找不到进行“安全测试”的网站没关系，DVWA帮你解决！我们可以利用搭建好的DVWA环境进行各种渗透测试，话不多说，先搭环境吧。由于DVWA需要PHP集成环境，本文选择WampServer，WampServer是集成了Apache Web服务器、PHP解释器和MySQL数据库的集成安装环境。当然，自己搭建环境也OK。或者国">
 <meta name="twitter:image" content="http://pd6jjyisi.bkt.clouddn.com/18-8-9/10863919.jpg">
 
 
@@ -391,7 +391,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-09T19:53:47+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-09T20:32:45+08:00">
                 2018年 08月 09日
               </time>
             
@@ -500,9 +500,11 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>人生苦短，靶场难觅。DVWA是一款基于PHP和MySQL的Web应用，找不到进行“安全测试”的网站没关系，DVWA帮你解决！我们可以利用搭建好的DVWA环境进行各种渗透测试，话不多说，先搭环境吧。<br>OS：Window 10 64bit<br>由于DVWA需要PHP集成环境，本文选择WampServer，WampServer是集成了Apache Web服务器、PHP解释器和MySQL数据库的集成安装环境。当然，自己搭建环境也OK。或者国内的PHPStudy一键安装。</p>
+        <hr>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>人生苦短，靶场难觅。DVWA是一款基于PHP和MySQL的Web应用，找不到进行“安全测试”的网站没关系，DVWA帮你解决！我们可以利用搭建好的DVWA环境进行各种渗透测试，话不多说，先搭环境吧。<br>由于DVWA需要PHP集成环境，本文选择WampServer，WampServer是集成了Apache Web服务器、PHP解释器和MySQL数据库的集成安装环境。当然，自己搭建环境也OK。或者国内的PHPStudy一键安装。</p>
 <ul>
+<li>OS：Window 10 64bit</li>
 <li>WampServer下载：<a href="http://www.wampserver.com/en/" target="_blank" rel="noopener">http://www.wampserver.com/en/</a> –根据自己电脑位数选择</li>
 <li>DVWA下载：<a href="http://www.dvwa.co.uk/" target="_blank" rel="noopener">http://www.dvwa.co.uk/</a> –这里是压缩包</li>
 </ul>
@@ -514,7 +516,8 @@
 <h2 id="配置MySQL"><a href="#配置MySQL" class="headerlink" title="配置MySQL"></a>配置MySQL</h2><p>在浏览器地址栏输入<a href="http://127.0.0.1/phpmyadmin" target="_blank" rel="noopener">127.0.0.1/phpmyadmin</a>进入MySQL数据库登陆界面。用户名为<strong>root</strong>，初始密码为<strong>空</strong>。<br><img src="http://pd6jjyisi.bkt.clouddn.com/18-8-9/44615740.jpg" alt="PhpMyadmin"><br>然后是修改root账户的密码。点击 <em>账户</em> ，再点击root用户的<em>修改权限</em>即可看到 <em>修改密码</em> 选项，输入两次密码点击 <em>执行</em> 即可。<br><img src="http://pd6jjyisi.bkt.clouddn.com/18-8-9/10299817.jpg" alt="修改密码"><br>修改密码后用修改过后的密码重新进入<a href="http://127.0.0.1/phpmyadmin" target="_blank" rel="noopener">127.0.0.1/phpmyadmin</a>即修改成功。</p>
 <h2 id="DVWA配置"><a href="#DVWA配置" class="headerlink" title="DVWA配置"></a>DVWA配置</h2><p>我们将前面下载好的DVWA压缩包解压至WampServer的安装目录里的www目录下，将解压后的文件夹DVWA-master更名为dvwa<br><img src="http://pd6jjyisi.bkt.clouddn.com/18-8-9/41588836.jpg" alt=""><br>然后进入wamp64\www\dvwa\config文件夹，将此文件夹下的config.inc.php.dist文件的.dist后缀去掉变成PHP文件，再用文本编辑器打开。<br><img src="http://pd6jjyisi.bkt.clouddn.com/18-8-9/24201904.jpg" alt=""><br>找到如下字段，将数据库密码字段改成我们前面设置好的密码。<br><img src="http://pd6jjyisi.bkt.clouddn.com/18-8-9/20555063.jpg" alt=""></p>
 <h2 id="登陆DVWA"><a href="#登陆DVWA" class="headerlink" title="登陆DVWA"></a>登陆DVWA</h2><p>在浏览器地址栏输入<a href="http://127.0.0.1/dvwa" target="_blank" rel="noopener">127.0.0.1/dvwa</a>，输入账号 <strong>admin</strong> ，密码为 <strong>password</strong> ，再点击 <em>Create/Reset Datebase</em> 即可初始化DVWA，然后再次登陆即可。<br><img src="http://pd6jjyisi.bkt.clouddn.com/18-8-9/90421859.jpg" alt=""></p>
-<h4 id="本文结束，敬请关注后续博文。"><a href="#本文结束，敬请关注后续博文。" class="headerlink" title="本文结束，敬请关注后续博文。"></a>本文结束，敬请关注后续博文。</h4>
+<h4 id="本文结束，敬请关注后续博文。"><a href="#本文结束，敬请关注后续博文。" class="headerlink" title="本文结束，敬请关注后续博文。"></a>本文结束，敬请关注后续博文。</h4><hr>
+
       
     </div>
     
@@ -599,6 +602,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/09/en_study/" rel="prev" title="英语摘抄">
+                英语摘抄 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -686,7 +693,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -697,7 +704,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -708,7 +715,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -832,7 +839,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">899</span>
+    <span title="Site words total count">1.4k</span>
   
 </div>
 
