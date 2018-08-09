@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Good]]></title>
+    <title><![CDATA[WampServer+DVWA搭建本地渗透测试环境]]></title>
     <url>%2F2018%2F08%2F08%2Fthe2nd%2F</url>
-    <content type="text"><![CDATA[GOOD NIGHT!]]></content>
+    <content type="text"><![CDATA[前言 人生苦短，靶场难觅。DVWA是一款基于PHP和MySQL的Web应用，找不到进行“安全测试”的网站没关系，DVWA帮你解决！我们可以利用搭建好的DVWA环境进行各种渗透测试，话不多说，先搭环境吧。OS：Window 10 64bit由于DVWA需要PHP集成环境，本文选择WampServer，WampServer是集成了Apache Web服务器、PHP解释器和MySQL数据库的集成安装环境。当然，自己搭建环境也OK。或者国内的PHPStudy一键安装。 WampServer下载：http://www.wampserver.com/en/ –根据自己电脑位数选择 DVWA下载：http://www.dvwa.co.uk/ –这里是压缩包 安装WampServer 参考百度经验安装WampServer 安装完后在浏览器地址栏输入127.0.0.1就可以进入WampServer界面。 配置MySQL在浏览器地址栏输入127.0.0.1/phpmyadmin进入MySQL数据库登陆界面。用户名为root，初始密码为空。然后是修改root账户的密码。点击 账户 ，再点击root用户的修改权限即可看到 修改密码 选项，输入两次密码点击 执行 即可。修改密码后用修改过后的密码重新进入127.0.0.1/phpmyadmin即修改成功。 DVWA配置我们将前面下载好的DVWA压缩包解压至WampServer的安装目录里的www目录下，将解压后的文件夹DVWA-master更名为dvwa然后进入wamp64\www\dvwa\config文件夹，将此文件夹下的config.inc.php.dist文件的.dist后缀去掉变成PHP文件，再用文本编辑器打开。找到如下字段，将数据库密码字段改成我们前面设置好的密码。 登陆DVWA在浏览器地址栏输入127.0.0.1/dvwa，输入账号 admin ，密码为 password ，再点击 Create/Reset Datebase 即可初始化DVWA，然后再次登陆即可。 本文结束，敬请关注后续博文。]]></content>
+      <categories>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>渗透</tag>
+        <tag>网络安全</tag>
+        <tag>Web安全</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[第一篇 写在博客搭建完成时]]></title>
