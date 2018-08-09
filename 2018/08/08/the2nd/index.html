@@ -82,6 +82,8 @@
 
 
 
+  <link rel="manifest" href="/images/manifest.json">
+
 
 
 
@@ -99,11 +101,11 @@
 <meta name="description" content="GOOD NIGHT!">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Good">
-<meta property="og:url" content="https://dorianxiao.github.io/2018/08/08/Good/index.html">
+<meta property="og:url" content="https://dorianxiao.github.io/2018/08/08/the2nd/index.html">
 <meta property="og:site_name" content="XIAO">
 <meta property="og:description" content="GOOD NIGHT!">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-09T08:35:06.802Z">
+<meta property="og:updated_time" content="2018-08-09T09:17:48.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Good">
 <meta name="twitter:description" content="GOOD NIGHT!">
@@ -136,7 +138,7 @@
 
 
 
-  <link rel="canonical" href="https://dorianxiao.github.io/2018/08/08/Good/"/>
+  <link rel="canonical" href="https://dorianxiao.github.io/2018/08/08/the2nd/"/>
 
 
 
@@ -334,7 +336,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dorianxiao.github.io/2018/08/08/Good/">
+    <link itemprop="mainEntityOfPage" href="https://dorianxiao.github.io/2018/08/08/the2nd/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO">
@@ -380,7 +382,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-09T16:35:06+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-09T17:17:48+08:00">
                 2018年 08月 09日
               </time>
             
@@ -390,11 +392,21 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/08/the2nd/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/08/the2nd/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
           
-             <span id="/2018/08/08/Good/" class="leancloud_visitors" data-flag-title="Good">
+             <span id="/2018/08/08/the2nd/" class="leancloud_visitors" data-flag-title="Good">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -502,7 +514,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://dorianxiao.github.io/2018/08/08/Good/" title="Good">https://dorianxiao.github.io/2018/08/08/Good/</a>
+    <a href="https://dorianxiao.github.io/2018/08/08/the2nd/" title="Good">https://dorianxiao.github.io/2018/08/08/the2nd/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -563,7 +575,10 @@
 
   
     <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODczMS8xNTI1OQ=="></div>
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
     </div>
 
   
@@ -599,7 +614,7 @@
                 alt="XIAO" />
             
               <p class="site-author-name" itemprop="name">XIAO</p>
-              <p class="site-description motion-element" itemprop="description">厚德载物 自强不息</p>
+              <p class="site-description motion-element" itemprop="description">自强不息  厚德载物</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -721,7 +736,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">379</span>
+    <span title="Site words total count">420</span>
   
 </div>
 
@@ -877,22 +892,57 @@
 
 
   
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
 
 
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: '21002283',
+            repo: 'gitment',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'f39cbb1bdb85b5426eedb14f3ca5bcb481135110',
+            
+                client_id: '9ec7549612d65ac0cfe8'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
 
 
 
