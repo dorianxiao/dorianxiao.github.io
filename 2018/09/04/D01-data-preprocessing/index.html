@@ -98,19 +98,19 @@
 
 
 
-<meta name="description" content="本文已同步至我的GitHub上，欢迎来Fork。  第1天数据预处理&amp;emsp;&amp;emsp;根据上图六个步骤来进行数据预处理。 0x00  导入库12import numpy as npimport pandas as pd 0x01  导入数据集123dataset = pd.read_csv(&apos;Data.csv&apos;)X = dataset.iloc[ : , : -1].valuesY = d">
+<meta name="description" content="本文已同步至我的GitHub上，欢迎来Fork。项目来源于Siraj Raval。  第1天数据预处理&amp;emsp;&amp;emsp;根据上图六个步骤来进行数据预处理。 0x00  导入库12import numpy as npimport pandas as pd 0x01  导入数据集123dataset = pd.read_csv(&apos;Data.csv&apos;)X = dataset.iloc[ : ,">
 <meta name="keywords" content="机器学习,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【机器学习100天】第1天——数据预处理">
 <meta property="og:url" content="https://dorianxiao.github.io/2018/09/04/D01-data-preprocessing/index.html">
 <meta property="og:site_name" content="XIAO">
-<meta property="og:description" content="本文已同步至我的GitHub上，欢迎来Fork。  第1天数据预处理&amp;emsp;&amp;emsp;根据上图六个步骤来进行数据预处理。 0x00  导入库12import numpy as npimport pandas as pd 0x01  导入数据集123dataset = pd.read_csv(&apos;Data.csv&apos;)X = dataset.iloc[ : , : -1].valuesY = d">
+<meta property="og:description" content="本文已同步至我的GitHub上，欢迎来Fork。项目来源于Siraj Raval。  第1天数据预处理&amp;emsp;&amp;emsp;根据上图六个步骤来进行数据预处理。 0x00  导入库12import numpy as npimport pandas as pd 0x01  导入数据集123dataset = pd.read_csv(&apos;Data.csv&apos;)X = dataset.iloc[ : ,">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pd6jjyisi.bkt.clouddn.com/18-9-4/45730869.jpg">
-<meta property="og:updated_time" content="2018-09-04T11:09:45.734Z">
+<meta property="og:updated_time" content="2018-09-04T11:49:49.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【机器学习100天】第1天——数据预处理">
-<meta name="twitter:description" content="本文已同步至我的GitHub上，欢迎来Fork。  第1天数据预处理&amp;emsp;&amp;emsp;根据上图六个步骤来进行数据预处理。 0x00  导入库12import numpy as npimport pandas as pd 0x01  导入数据集123dataset = pd.read_csv(&apos;Data.csv&apos;)X = dataset.iloc[ : , : -1].valuesY = d">
+<meta name="twitter:description" content="本文已同步至我的GitHub上，欢迎来Fork。项目来源于Siraj Raval。  第1天数据预处理&amp;emsp;&amp;emsp;根据上图六个步骤来进行数据预处理。 0x00  导入库12import numpy as npimport pandas as pd 0x01  导入数据集123dataset = pd.read_csv(&apos;Data.csv&apos;)X = dataset.iloc[ : ,">
 <meta name="twitter:image" content="http://pd6jjyisi.bkt.clouddn.com/18-9-4/45730869.jpg">
 
 
@@ -385,7 +385,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T19:09:45+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T19:49:49+08:00">
                 2018年 09月 04日
               </time>
             
@@ -457,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  551
+                  584
                 </span>
               
 
@@ -495,7 +495,7 @@
 
       
         <blockquote>
-<p>本文已同步至我的GitHub上，欢迎来<a href="https://github.com/dorianxiao/100_day_ML" target="_blank" rel="noopener">Fork</a>。</p>
+<p>本文已同步至我的GitHub上，欢迎来<a href="https://github.com/dorianxiao/100_day_ML" target="_blank" rel="noopener">Fork</a>。<br>项目来源于<a href="https://github.com/llSourcell" title="Siraj Raval" target="_blank" rel="noopener">Siraj Raval</a>。</p>
 </blockquote>
 <h2 id="第1天"><a href="#第1天" class="headerlink" title="第1天"></a>第1天</h2><h1 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h1><p><img src="http://pd6jjyisi.bkt.clouddn.com/18-9-4/45730869.jpg" alt="Process"><br>&emsp;&emsp;根据上图六个步骤来进行数据预处理。</p>
 <h2 id="0x00-导入库"><a href="#0x00-导入库" class="headerlink" title="0x00  导入库"></a>0x00  导入库</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
@@ -518,6 +518,9 @@
 <p>train_test_split第一个参数表示 <em>被划分的样本特征集</em> ，第二个参数表示 <em>被划分的样本标签</em><br>test_size在0-1之间表示样本占比，是整数则表示样本数量<br>random_state表示随机数种子</p>
 </blockquote>
 <h2 id="0x05-特征缩放"><a href="#0x05-特征缩放" class="headerlink" title="0x05  特征缩放"></a>0x05  特征缩放</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line">sc_X = StandardScaler()</span><br><span class="line">X_train = sc_X.fit_transform(X_train)</span><br><span class="line">X_test = sc_X.fit_transform(X_test)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>特征缩放的目标就是数据规范化，使得特征的范围具有可比性。</p>
+</blockquote>
 <h2 id="完整代码如下"><a href="#完整代码如下" class="headerlink" title="完整代码如下"></a>完整<a href="https://github.com/dorianxiao/100_day_ML/blob/master/md_files/D01/data_preprocessing.py" target="_blank" rel="noopener">代码</a>如下</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">dataset = pd.read_csv(<span class="string">'Data.csv'</span>)</span><br><span class="line">X = dataset.iloc[ : , :<span class="number">-1</span>].values</span><br><span class="line">Y = dataset.iloc[ : , <span class="number">3</span>].values</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> Imputer</span><br><span class="line">imputer = Imputer(missing_values = <span class="string">"NaN"</span>, strategy = <span class="string">"mean"</span>, axis = <span class="number">0</span>)</span><br><span class="line">imputer = imputer.fit(X[ : , <span class="number">1</span>:<span class="number">3</span>])</span><br><span class="line">X[ : , <span class="number">1</span>:<span class="number">3</span>] = imputer.transform(X[ : , <span class="number">1</span>:<span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> LabelEncoder, OneHotEncoder</span><br><span class="line">X[ : , <span class="number">0</span>] = LabelEncoder().fit_transform(X[ : , <span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">X = OneHotEncoder(categorical_features = [<span class="number">0</span>]).fit_transform(X).toarray()</span><br><span class="line">Y =  LabelEncoder().fit_transform(Y)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train, X_test, Y_train, Y_test = train_test_split( X , Y , test_size = <span class="number">0.2</span>, random_state = <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line">sc_X = StandardScaler()</span><br><span class="line">X_train = sc_X.fit_transform(X_train)</span><br><span class="line">X_test = sc_X.fit_transform(X_test)</span><br></pre></td></tr></table></figure>
 <hr>
 
@@ -603,6 +606,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/04/D02-simple-linear-regression/" rel="prev" title="【机器学习100天】第2天——简单线性回归">
+                【机器学习100天】第2天——简单线性回归 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -690,7 +697,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -836,7 +843,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.4k</span>
+    <span title="Site words total count">2.8k</span>
   
 </div>
 
