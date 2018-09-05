@@ -98,20 +98,22 @@
 
 
 
-<meta name="description" content="本文已同步至我的GitHub上，欢迎来Fork。项目来源于Siraj Raval。  第1天数据预处理&amp;emsp;&amp;emsp;根据上图六个步骤来进行数据预处理。 0x00  导入库12import numpy as npimport pandas as pd 0x01  导入数据集123dataset = pd.read_csv(&apos;Data.csv&apos;)X = dataset.iloc[ : ,">
+<meta name="description" content="本文已同步至我的GitHub上，欢迎来Fork。项目来源于Siraj Raval。  第6天Logistic回归本节所用数据集此数据集包含了用户的基本信息：用户ID,性别,年龄以及预估薪资。一家汽车公司刚刚推出了他们新型的豪华SUV，我们尝试来预测哪些用户会购买这种全新SUV。数据集的最后一列用来表示用户是否购买。我们将建立一种模型来预测用户是否购买这种SUV，该模型基于年龄和预计薪资两个变量。">
 <meta name="keywords" content="机器学习,python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【机器学习100天】第1天——数据预处理">
-<meta property="og:url" content="https://dorianxiao.github.io/2018/09/04/D01-data-preprocessing/index.html">
+<meta property="og:title" content="【机器学习100天】第6天——Logistic回归">
+<meta property="og:url" content="https://dorianxiao.github.io/2018/09/05/D06-logistic-regression/index.html">
 <meta property="og:site_name" content="XIAO">
-<meta property="og:description" content="本文已同步至我的GitHub上，欢迎来Fork。项目来源于Siraj Raval。  第1天数据预处理&amp;emsp;&amp;emsp;根据上图六个步骤来进行数据预处理。 0x00  导入库12import numpy as npimport pandas as pd 0x01  导入数据集123dataset = pd.read_csv(&apos;Data.csv&apos;)X = dataset.iloc[ : ,">
+<meta property="og:description" content="本文已同步至我的GitHub上，欢迎来Fork。项目来源于Siraj Raval。  第6天Logistic回归本节所用数据集此数据集包含了用户的基本信息：用户ID,性别,年龄以及预估薪资。一家汽车公司刚刚推出了他们新型的豪华SUV，我们尝试来预测哪些用户会购买这种全新SUV。数据集的最后一列用来表示用户是否购买。我们将建立一种模型来预测用户是否购买这种SUV，该模型基于年龄和预计薪资两个变量。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pd6jjyisi.bkt.clouddn.com/18-9-4/45730869.jpg">
-<meta property="og:updated_time" content="2018-09-04T11:49:49.660Z">
+<meta property="og:image" content="http://pd6jjyisi.bkt.clouddn.com/18-9-5/44055773.jpg">
+<meta property="og:image" content="http://pd6jjyisi.bkt.clouddn.com/18-9-5/64623595.jpg">
+<meta property="og:image" content="http://pd6jjyisi.bkt.clouddn.com/18-9-5/94854609.jpg">
+<meta property="og:updated_time" content="2018-09-05T13:52:27.835Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【机器学习100天】第1天——数据预处理">
-<meta name="twitter:description" content="本文已同步至我的GitHub上，欢迎来Fork。项目来源于Siraj Raval。  第1天数据预处理&amp;emsp;&amp;emsp;根据上图六个步骤来进行数据预处理。 0x00  导入库12import numpy as npimport pandas as pd 0x01  导入数据集123dataset = pd.read_csv(&apos;Data.csv&apos;)X = dataset.iloc[ : ,">
-<meta name="twitter:image" content="http://pd6jjyisi.bkt.clouddn.com/18-9-4/45730869.jpg">
+<meta name="twitter:title" content="【机器学习100天】第6天——Logistic回归">
+<meta name="twitter:description" content="本文已同步至我的GitHub上，欢迎来Fork。项目来源于Siraj Raval。  第6天Logistic回归本节所用数据集此数据集包含了用户的基本信息：用户ID,性别,年龄以及预估薪资。一家汽车公司刚刚推出了他们新型的豪华SUV，我们尝试来预测哪些用户会购买这种全新SUV。数据集的最后一列用来表示用户是否购买。我们将建立一种模型来预测用户是否购买这种SUV，该模型基于年龄和预计薪资两个变量。">
+<meta name="twitter:image" content="http://pd6jjyisi.bkt.clouddn.com/18-9-5/44055773.jpg">
 
 
 
@@ -141,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="https://dorianxiao.github.io/2018/09/04/D01-data-preprocessing/"/>
+  <link rel="canonical" href="https://dorianxiao.github.io/2018/09/05/D06-logistic-regression/"/>
 
 
 
 
 
-  <title>【机器学习100天】第1天——数据预处理 | XIAO</title>
+  <title>【机器学习100天】第6天——Logistic回归 | XIAO</title>
   
 
 
@@ -339,7 +341,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dorianxiao.github.io/2018/09/04/D01-data-preprocessing/">
+    <link itemprop="mainEntityOfPage" href="https://dorianxiao.github.io/2018/09/05/D06-logistic-regression/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XIAO">
@@ -356,7 +358,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【机器学习100天】第1天——数据预处理</h1>
+          <h1 class="post-title" itemprop="name headline">【机器学习100天】第6天——Logistic回归</h1>
         
 
         <div class="post-meta">
@@ -369,8 +371,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T18:57:15+08:00">
-                2018年 09月 04日
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-05T21:50:56+08:00">
+                2018年 09月 05日
               </time>
             
 
@@ -385,8 +387,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T19:49:49+08:00">
-                2018年 09月 04日
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-05T21:52:27+08:00">
+                2018年 09月 05日
               </time>
             
           </span>
@@ -422,8 +424,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/04/D01-data-preprocessing/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/09/04/D01-data-preprocessing/" itemprop="commentsCount"></span>
+                <a href="/2018/09/05/D06-logistic-regression/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/09/05/D06-logistic-regression/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -431,7 +433,7 @@
 
           
           
-             <span id="/2018/09/04/D01-data-preprocessing/" class="leancloud_visitors" data-flag-title="【机器学习100天】第1天——数据预处理">
+             <span id="/2018/09/05/D06-logistic-regression/" class="leancloud_visitors" data-flag-title="【机器学习100天】第6天——Logistic回归">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -457,7 +459,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  584
+                  1,353
                 </span>
               
 
@@ -473,7 +475,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  7
                 </span>
               
             </div>
@@ -497,31 +499,20 @@
         <blockquote>
 <p>本文已同步至我的GitHub上，欢迎来<a href="https://github.com/dorianxiao/100_day_ML" target="_blank" rel="noopener">Fork</a>。<br>项目来源于<a href="https://github.com/llSourcell" title="Siraj Raval" target="_blank" rel="noopener">Siraj Raval</a>。</p>
 </blockquote>
-<h2 id="第1天"><a href="#第1天" class="headerlink" title="第1天"></a>第1天</h2><h1 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h1><p><img src="http://pd6jjyisi.bkt.clouddn.com/18-9-4/45730869.jpg" alt="Process"><br>&emsp;&emsp;根据上图六个步骤来进行数据预处理。</p>
-<h2 id="0x00-导入库"><a href="#0x00-导入库" class="headerlink" title="0x00  导入库"></a>0x00  导入库</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
-<h2 id="0x01-导入数据集"><a href="#0x01-导入数据集" class="headerlink" title="0x01  导入数据集"></a>0x01  导入<a href="https://raw.githubusercontent.com/dorianxiao/100_day_ML/master/md_files/D01/data.csv" target="_blank" rel="noopener">数据集</a></h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dataset = pd.read_csv(<span class="string">'Data.csv'</span>)</span><br><span class="line">X = dataset.iloc[ : , : <span class="number">-1</span>].values</span><br><span class="line">Y = dataset.iloc[ : , <span class="number">3</span>].values</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>iloc函数索引列数据<br><strong>X</strong>取除最后一列的数组<br><strong>Y</strong>取最后一列</p>
-</blockquote>
-<h2 id="0x02-处理缺失数据"><a href="#0x02-处理缺失数据" class="headerlink" title="0x02  处理缺失数据"></a>0x02  处理缺失数据</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> Imputer</span><br><span class="line">imputer = Imputer(missing_values = <span class="string">"NaN"</span>, strategy = <span class="string">"mean"</span>, axis = <span class="number">0</span>)</span><br><span class="line">imputer = imputer.fit(X[ : , <span class="number">1</span>:<span class="number">3</span>])  <span class="comment">#使用X的第2-3列训练一个Imputer类</span></span><br><span class="line">X[ : , <span class="number">1</span>:<span class="number">3</span>] = imputer.transform(X[ : , <span class="number">1</span>:<span class="number">3</span>])  <span class="comment">#用imputer对象对X本身进行处理</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>使用sklearn.preprocessing.Imputer类来处理缺失值，用NaN替代缺失值(NaN为浮点类型)</p>
-</blockquote>
-<h2 id="0x03-编码特征数据"><a href="#0x03-编码特征数据" class="headerlink" title="0x03  编码特征数据"></a>0x03  编码特征数据</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> LabelEncoder, OneHotEncoder</span><br><span class="line">X[ : , <span class="number">0</span>] = LabelEncoder().fit_transform(X[ : , <span class="number">0</span>])     <span class="comment">#LabelEncoder将标签标准化为0-标签数-1，fit并将X进行处理</span></span><br></pre></td></tr></table></figure>
-<h4 id="创建虚拟变量"><a href="#创建虚拟变量" class="headerlink" title="创建虚拟变量"></a>创建虚拟变量</h4><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = OneHotEncoder(categorical_features = [<span class="number">0</span>]).fit_transform(X).toarray()</span><br><span class="line">Y =  LabelEncoder().fit_transform(Y)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>onehotencoder将类别之间的距离用向量表示，每个类别之间距离相等<br>categorical_features需要类别的列索引   </p>
-</blockquote>
-<h2 id="0x04-将数据集划分为训练集和测试集"><a href="#0x04-将数据集划分为训练集和测试集" class="headerlink" title="0x04  将数据集划分为训练集和测试集"></a>0x04  将数据集划分为训练集和测试集</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train, X_test, Y_train, Y_test = train_test_split( X , Y , test_size = <span class="number">0.2</span>, random_state = <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<p><strong>*注</strong>：高级sklearn版本中的cross_validation已废弃，转移至model_selection模块中</p>
-<blockquote>
-<p>train_test_split第一个参数表示 <em>被划分的样本特征集</em> ，第二个参数表示 <em>被划分的样本标签</em><br>test_size在0-1之间表示样本占比，是整数则表示样本数量<br>random_state表示随机数种子</p>
-</blockquote>
-<h2 id="0x05-特征缩放"><a href="#0x05-特征缩放" class="headerlink" title="0x05  特征缩放"></a>0x05  特征缩放</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line">sc_X = StandardScaler()</span><br><span class="line">X_train = sc_X.fit_transform(X_train)</span><br><span class="line">X_test = sc_X.fit_transform(X_test)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>特征缩放的目标就是数据规范化，使得特征的范围具有可比性。</p>
-</blockquote>
-<h2 id="完整代码如下"><a href="#完整代码如下" class="headerlink" title="完整代码如下"></a>完整<a href="https://github.com/dorianxiao/100_day_ML/blob/master/md_files/D01/data_preprocessing.py" target="_blank" rel="noopener">代码</a>如下</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">dataset = pd.read_csv(<span class="string">'Data.csv'</span>)</span><br><span class="line">X = dataset.iloc[ : , :<span class="number">-1</span>].values</span><br><span class="line">Y = dataset.iloc[ : , <span class="number">3</span>].values</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> Imputer</span><br><span class="line">imputer = Imputer(missing_values = <span class="string">"NaN"</span>, strategy = <span class="string">"mean"</span>, axis = <span class="number">0</span>)</span><br><span class="line">imputer = imputer.fit(X[ : , <span class="number">1</span>:<span class="number">3</span>])</span><br><span class="line">X[ : , <span class="number">1</span>:<span class="number">3</span>] = imputer.transform(X[ : , <span class="number">1</span>:<span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> LabelEncoder, OneHotEncoder</span><br><span class="line">X[ : , <span class="number">0</span>] = LabelEncoder().fit_transform(X[ : , <span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">X = OneHotEncoder(categorical_features = [<span class="number">0</span>]).fit_transform(X).toarray()</span><br><span class="line">Y =  LabelEncoder().fit_transform(Y)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train, X_test, Y_train, Y_test = train_test_split( X , Y , test_size = <span class="number">0.2</span>, random_state = <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line">sc_X = StandardScaler()</span><br><span class="line">X_train = sc_X.fit_transform(X_train)</span><br><span class="line">X_test = sc_X.fit_transform(X_test)</span><br></pre></td></tr></table></figure>
+<h2 id="第6天"><a href="#第6天" class="headerlink" title="第6天"></a>第6天</h2><h1 id="Logistic回归"><a href="#Logistic回归" class="headerlink" title="Logistic回归"></a>Logistic回归</h1><p><img src="http://pd6jjyisi.bkt.clouddn.com/18-9-5/44055773.jpg" alt="Process"><br><strong>本节所用<a href="https://raw.githubusercontent.com/dorianxiao/100_day_ML/master/md_files/D06/Social_Network_Ads.csv" target="_blank" rel="noopener">数据集</a></strong><br>此数据集包含了用户的基本信息：用户ID,性别,年龄以及预估薪资。一家汽车公司刚刚推出了他们新型的豪华SUV，我们尝试来预测哪些用户会购买这种全新SUV。数据集的最后一列用来表示用户是否购买。我们将建立一种模型来预测用户是否购买这种SUV，该模型基于年龄和预计薪资两个变量。因此我们选择这两列为特征矩阵。我们尝试寻找用户年龄与预估薪资和是否购买SUV的决定之间的相关性。</p>
+<h2 id="0x00-数据预处理"><a href="#0x00-数据预处理" class="headerlink" title="0x00  数据预处理"></a>0x00  数据预处理</h2><h3 id="导入库"><a href="#导入库" class="headerlink" title="导入库"></a>导入库</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
+<h3 id="导入数据集"><a href="#导入数据集" class="headerlink" title="导入数据集"></a>导入数据集</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dataset = pd.read_csv(<span class="string">'Social_Network_Ads.csv'</span>)</span><br><span class="line">X = dataset.iloc[:, [<span class="number">2</span>, <span class="number">3</span>]].values    <span class="comment">#选择第3、4列(年龄和薪水)</span></span><br><span class="line">y = dataset.iloc[:, <span class="number">4</span>].values   <span class="comment">#最后一列为结果</span></span><br></pre></td></tr></table></figure>
+<h3 id="将数据集划分为训练集和测试集"><a href="#将数据集划分为训练集和测试集" class="headerlink" title="将数据集划分为训练集和测试集"></a>将数据集划分为训练集和测试集</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = <span class="number">0.25</span>, random_state = <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="特征缩放"><a href="#特征缩放" class="headerlink" title="特征缩放"></a>特征缩放</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line">sc = StandardScaler()</span><br><span class="line">X_train = sc.fit_transform(X_train)   <span class="comment">#对训练数据进行拟合并转化</span></span><br><span class="line">X_test = sc.transform(X_test)         <span class="comment">#基于现有的对象规则，标准化新的参数</span></span><br></pre></td></tr></table></figure>
+<h2 id="0x01-Logistic回归模型"><a href="#0x01-Logistic回归模型" class="headerlink" title="0x01  Logistic回归模型"></a>0x01  Logistic回归模型</h2><p>这项任务使用线性模型库，之所以称为线性模型库是因为Logistic回归是一个线性分类器，在二维平面上所有特征被一条直线分为两类。依据Logistic回归类创建一个分类器对象，我们用训练集来拟合此模型。</p>
+<h3 id="用训练集拟合Logistic回归模型"><a href="#用训练集拟合Logistic回归模型" class="headerlink" title="用训练集拟合Logistic回归模型"></a>用训练集拟合Logistic回归模型</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line">classifier = LogisticRegression()</span><br><span class="line">classifier.fit(X_train, y_train)</span><br></pre></td></tr></table></figure>
+<h2 id="0x02-预测测试集结果"><a href="#0x02-预测测试集结果" class="headerlink" title="0x02  预测测试集结果"></a>0x02  预测测试集结果</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y_pred = classifier.predict(X_test)</span><br></pre></td></tr></table></figure>
+<h2 id="0x03-评估预测结果"><a href="#0x03-评估预测结果" class="headerlink" title="0x03  评估预测结果"></a>0x03  评估预测结果</h2><p>经过上述步骤我们预测了测试集结果，现在我们要评估Logistic模型是否正确习得和理解了相关特征。这里引入混淆矩阵(Confusion Matrix)的概念。矩阵每一列代表预测值，每一行代表的是实际的类别(每一行的总数表明实际类别的总数)。这个名字来源于它可以非常容易的表明多个类别是否有混淆(也就是一个class被预测成另一个class)。</p>
+<h3 id="生成混淆矩阵"><a href="#生成混淆矩阵" class="headerlink" title="生成混淆矩阵"></a>生成混淆矩阵</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> confusion_matrix</span><br><span class="line">cm = confusion_matrix(y_test, y_pred)</span><br></pre></td></tr></table></figure>
+<h3 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib.colors <span class="keyword">import</span> ListedColormap</span><br><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">u'SimHei'</span>]</span><br><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="keyword">False</span>    <span class="comment">#这两行代码使图片能显示中文</span></span><br><span class="line">X_set, y_set = X_train, y_train</span><br><span class="line">X1, X2 = np.meshgrid(np.arange(start = X_set[:, <span class="number">0</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">0</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>),</span><br><span class="line">                     np.arange(start = X_set[:, <span class="number">1</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">1</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>))</span><br><span class="line">plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),</span><br><span class="line">             alpha = <span class="number">0.75</span>, cmap = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>)))</span><br><span class="line">plt.xlim(X1.min(), X1.max())</span><br><span class="line">plt.ylim(X2.min(), X2.max())</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> enumerate(np.unique(y_set)):</span><br><span class="line">    plt.scatter(X_set[y_set == j, <span class="number">0</span>], X_set[y_set == j, <span class="number">1</span>],</span><br><span class="line">                c = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>))(i), label = j)</span><br><span class="line">plt.title(<span class="string">'Logistic回归 (训练集)'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'Age'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'Estimated Salary'</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="http://pd6jjyisi.bkt.clouddn.com/18-9-5/64623595.jpg" alt=""><br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib.colors <span class="keyword">import</span> ListedColormap</span><br><span class="line">X_set, y_set = X_test, y_test</span><br><span class="line">X1, X2 = np.meshgrid(np.arange(start = X_set[:, <span class="number">0</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">0</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>),</span><br><span class="line">                     np.arange(start = X_set[:, <span class="number">1</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">1</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>))</span><br><span class="line">plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),</span><br><span class="line">             alpha = <span class="number">0.75</span>, cmap = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>)))</span><br><span class="line">plt.xlim(X1.min(), X1.max())</span><br><span class="line">plt.ylim(X2.min(), X2.max())</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> enumerate(np.unique(y_set)):</span><br><span class="line">    plt.scatter(X_set[y_set == j, <span class="number">0</span>], X_set[y_set == j, <span class="number">1</span>],</span><br><span class="line">                c = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>))(i), label = j)</span><br><span class="line">plt.title(<span class="string">'Logistic回归(测试集)'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'Age'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'Estimated Salary'</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://pd6jjyisi.bkt.clouddn.com/18-9-5/94854609.jpg" alt=""></p>
+<h2 id="完整代码如下"><a href="#完整代码如下" class="headerlink" title="完整代码如下"></a>完整<a href="https://raw.githubusercontent.com/dorianxiao/100_day_ML/master/md_files/D06/logistic_regression.py" target="_blank" rel="noopener">代码</a>如下</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">dataset = pd.read_csv(<span class="string">'Social_Network_Ads.csv'</span>)</span><br><span class="line">X = dataset.iloc[:, [<span class="number">2</span>, <span class="number">3</span>]].values</span><br><span class="line">y = dataset.iloc[:, <span class="number">4</span>].values</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = <span class="number">0.25</span>, random_state = <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line">sc = StandardScaler()</span><br><span class="line">X_train = sc.fit_transform(X_train)</span><br><span class="line">X_test = sc.transform(X_test)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line">classifier = LogisticRegression()</span><br><span class="line">classifier.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line">y_pred = classifier.predict(X_test)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> confusion_matrix</span><br><span class="line">cm = confusion_matrix(y_test, y_pred)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> matplotlib.colors <span class="keyword">import</span> ListedColormap</span><br><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">u'SimHei'</span>]</span><br><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="keyword">False</span>    <span class="comment">#这两行代码使图片能显示中文</span></span><br><span class="line">X_set, y_set = X_train, y_train</span><br><span class="line">X1, X2 = np.meshgrid(np.arange(start = X_set[:, <span class="number">0</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">0</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>),</span><br><span class="line">                     np.arange(start = X_set[:, <span class="number">1</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">1</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>))</span><br><span class="line">plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),</span><br><span class="line">             alpha = <span class="number">0.75</span>, cmap = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>)))</span><br><span class="line">plt.xlim(X1.min(), X1.max())</span><br><span class="line">plt.ylim(X2.min(), X2.max())</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> enumerate(np.unique(y_set)):</span><br><span class="line">    plt.scatter(X_set[y_set == j, <span class="number">0</span>], X_set[y_set == j, <span class="number">1</span>],</span><br><span class="line">                c = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>))(i), label = j)</span><br><span class="line">plt.title(<span class="string">'Logistic回归 (训练集)'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'Age'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'Estimated Salary'</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> matplotlib.colors <span class="keyword">import</span> ListedColormap</span><br><span class="line">X_set, y_set = X_test, y_test</span><br><span class="line">X1, X2 = np.meshgrid(np.arange(start = X_set[:, <span class="number">0</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">0</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>),</span><br><span class="line">                     np.arange(start = X_set[:, <span class="number">1</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">1</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>))</span><br><span class="line">plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),</span><br><span class="line">             alpha = <span class="number">0.75</span>, cmap = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>)))</span><br><span class="line">plt.xlim(X1.min(), X1.max())</span><br><span class="line">plt.ylim(X2.min(), X2.max())</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> enumerate(np.unique(y_set)):</span><br><span class="line">    plt.scatter(X_set[y_set == j, <span class="number">0</span>], X_set[y_set == j, <span class="number">1</span>],</span><br><span class="line">                c = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>))(i), label = j)</span><br><span class="line">plt.title(<span class="string">'Logistic回归(测试集)'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'Age'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'Estimated Salary'</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -567,7 +558,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://dorianxiao.github.io/2018/09/04/D01-data-preprocessing/" title="【机器学习100天】第1天——数据预处理">https://dorianxiao.github.io/2018/09/04/D01-data-preprocessing/</a>
+    <a href="https://dorianxiao.github.io/2018/09/05/D06-logistic-regression/" title="【机器学习100天】第6天——Logistic回归">https://dorianxiao.github.io/2018/09/05/D06-logistic-regression/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -597,8 +588,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/09/en_study/" rel="next" title="英语摘抄">
-                <i class="fa fa-chevron-left"></i> 英语摘抄
+              <a href="/2018/09/05/D03-multiple-linear-regression/" rel="next" title="【机器学习100天】第3天——多元线性回归">
+                <i class="fa fa-chevron-left"></i> 【机器学习100天】第3天——多元线性回归
               </a>
             
           </div>
@@ -606,10 +597,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/04/D02-simple-linear-regression/" rel="prev" title="【机器学习100天】第2天——简单线性回归">
-                【机器学习100天】第2天——简单线性回归 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -802,7 +789,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第1天"><span class="nav-number">1.</span> <span class="nav-text">第1天</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据预处理"><span class="nav-number"></span> <span class="nav-text">数据预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x00-导入库"><span class="nav-number">1.</span> <span class="nav-text">0x00  导入库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-导入数据集"><span class="nav-number">2.</span> <span class="nav-text">0x01  导入数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-处理缺失数据"><span class="nav-number">3.</span> <span class="nav-text">0x02  处理缺失数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-编码特征数据"><span class="nav-number">4.</span> <span class="nav-text">0x03  编码特征数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建虚拟变量"><span class="nav-number">4.0.1.</span> <span class="nav-text">创建虚拟变量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04-将数据集划分为训练集和测试集"><span class="nav-number">5.</span> <span class="nav-text">0x04  将数据集划分为训练集和测试集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x05-特征缩放"><span class="nav-number">6.</span> <span class="nav-text">0x05  特征缩放</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码如下"><span class="nav-number">7.</span> <span class="nav-text">完整代码如下</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第6天"><span class="nav-number">1.</span> <span class="nav-text">第6天</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Logistic回归"><span class="nav-number"></span> <span class="nav-text">Logistic回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x00-数据预处理"><span class="nav-number">1.</span> <span class="nav-text">0x00  数据预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#导入库"><span class="nav-number">1.1.</span> <span class="nav-text">导入库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入数据集"><span class="nav-number">1.2.</span> <span class="nav-text">导入数据集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将数据集划分为训练集和测试集"><span class="nav-number">1.3.</span> <span class="nav-text">将数据集划分为训练集和测试集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征缩放"><span class="nav-number">1.4.</span> <span class="nav-text">特征缩放</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-Logistic回归模型"><span class="nav-number">2.</span> <span class="nav-text">0x01  Logistic回归模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用训练集拟合Logistic回归模型"><span class="nav-number">2.1.</span> <span class="nav-text">用训练集拟合Logistic回归模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-预测测试集结果"><span class="nav-number">3.</span> <span class="nav-text">0x02  预测测试集结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-评估预测结果"><span class="nav-number">4.</span> <span class="nav-text">0x03  评估预测结果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成混淆矩阵"><span class="nav-number">4.1.</span> <span class="nav-text">生成混淆矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可视化"><span class="nav-number">4.2.</span> <span class="nav-text">可视化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码如下"><span class="nav-number">5.</span> <span class="nav-text">完整代码如下</span></a></li></ol></div>
             
 
           </div>
